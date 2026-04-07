@@ -1,0 +1,28 @@
+﻿@{
+    ViewData["Title"] = "Login";
+}
+<!DOCTYPE html>
+    <head>
+        <title>Login</title>
+        <style>
+            .botonlogin{
+                color: white;
+                background-color: blue; 
+            }
+
+        </style>
+    </head>
+    <body>
+        <h1>INICIAR SESION</h1>
+    <form asp-action="Login" method="post">
+        <label>Ingrese su usuario :</label><br />
+        <input type="text" name="Username" /><br />
+        <label>Ingrese su contraseña :</label><br />
+        <input type="password" name="Clave" /><br /><br />
+        <button class="botonlogin" type="submit">Entrar</button><br /><br />
+
+        <a href="/CuentaControlador/Registro">Registrate!!!</a>
+    </form>
+    
+    </body>
+    </html>

@@ -1,0 +1,49 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Registro";
+}
+
+<!DOCTYPE html>
+<head>
+    <title>Login</title>
+    <style>
+        .botonlogin {
+            color: white;
+            background-color: blue;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>REGISTRATE</h1>
+    <form asp-action="Registro" method="post">
+        <label>Nombre de usuario :</label><br />
+        <input type="text" name="Username" /><br />
+
+        <label>Ingrese sus nombres :</label><br />
+        <input type="text" name="Nombres" /><br />
+
+        <label>Ingrese sus apellidos :</label><br />
+        <input type="text" name="Apellidos" /><br />
+
+        <label>Ingrese su DNI :</label><br />
+        <input type="text" name="Dni" maxlength="7" /><br />
+
+        <label>Ingrese su número de teléfono :</label><br />
+        <input type="text" name="Telefono" maxlength="9" /><br />
+
+        <label>Ingrese su correo electrónico :</label><br />
+        <input type="email" name="Correo" /><br /><br />
+
+        <label>Ingrese su contraseña :</label><br />
+        <input type="password" name="Clave" /><br /><br />
+
+        <button class="botonregister" type="submit">Registrarse</button><br /><br />
+
+        <a href="/CuentaControlador/Login">Ya tienes cuenta? Inicia sesión</a>
+    </form>
+
+</body>
+</html>
