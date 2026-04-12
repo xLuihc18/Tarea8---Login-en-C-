@@ -1,0 +1,87 @@
+﻿@{
+    ViewData["Title"] = "Registro";
+    Layout = null; 
+}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-50 flex items-center justify-center min-h-screen p-4">
+
+    <div class="flex flex-col gap-6 w-full max-w-2xl bg-white border border-slate-200 rounded-xl shadow-sm overflow-hidden">
+
+        <div class="p-6 pb-0 space-y-1.5 text-center">
+            <h2 class="text-2xl font-semibold tracking-tight text-slate-900">Crear una cuenta</h2>
+            <p class="text-sm text-slate-500">Ingresa tus datos personales para empezar</p>
+        </div>
+
+        <div class="p-6 pt-0">
+            <form asp-action="Registro" method="post" class="grid gap-6">
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+
+                    <div class="grid gap-2">
+                        <label class="text-sm font-medium leading-none">Nombre de usuario</label>
+                        <input name="Username" type="text" required
+                               class="flex h-10 w-full rounded-md border border-slate-200 bg-white px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-slate-950 focus:ring-offset-2" />
+                    </div>
+
+                    <div class="grid gap-2">
+                        <label class="text-sm font-medium leading-none">Correo electrónico</label>
+                        <input name="Correo" type="email" required
+                               class="flex h-10 w-full rounded-md border border-slate-200 bg-white px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-slate-950 focus:ring-offset-2" />
+                    </div>
+
+                    <div class="grid gap-2">
+                        <label class="text-sm font-medium leading-none">Nombres</label>
+                        <input name="Nombres" type="text" required
+                               class="flex h-10 w-full rounded-md border border-slate-200 bg-white px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-slate-950 focus:ring-offset-2" />
+                    </div>
+
+                    <div class="grid gap-2">
+                        <label class="text-sm font-medium leading-none">Apellidos</label>
+                        <input name="Apellidos" type="text" required
+                               class="flex h-10 w-full rounded-md border border-slate-200 bg-white px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-slate-950 focus:ring-offset-2" />
+                    </div>
+
+                    <div class="grid gap-2">
+                        <label class="text-sm font-medium leading-none">DNI</label>
+                        <input name="Dni" type="text" maxlength="8" required
+                               class="flex h-10 w-full rounded-md border border-slate-200 bg-white px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-slate-950 focus:ring-offset-2" />
+                    </div>
+
+                    <div class="grid gap-2">
+                        <label class="text-sm font-medium leading-none">Teléfono</label>
+                        <input name="Telefono" type="text" maxlength="9" required
+                               class="flex h-10 w-full rounded-md border border-slate-200 bg-white px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-slate-950 focus:ring-offset-2" />
+                    </div>
+
+                    <div class="grid gap-2 md:col-span-2">
+                        <label class="text-sm font-medium leading-none">Contraseña</label>
+                        <input name="Clave" type="password" required
+                               class="flex h-10 w-full rounded-md border border-slate-200 bg-white px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-slate-950 focus:ring-offset-2" />
+                    </div>
+                </div>
+
+                <button type="submit"
+                        class="inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors bg-slate-900 text-slate-50 hover:bg-slate-900/90 h-10 px-4 py-2 shadow-sm">
+                    Crear cuenta
+                </button>
+
+                <div class="text-center text-sm text-slate-600">
+                    ¿Ya tienes una cuenta?
+                    <a href="/CuentaControlador/Login" class="font-medium text-slate-950 underline underline-offset-4 hover:opacity-80">
+                        Inicia sesión aquí
+                    </a>
+                </div>
+
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>

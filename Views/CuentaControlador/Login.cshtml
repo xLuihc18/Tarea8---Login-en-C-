@@ -1,0 +1,65 @@
+﻿@{
+    ViewData["Title"] = "Login";
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-50 flex items-center justify-center min-h-screen p-4">
+
+    <div class="flex flex-col gap-6 w-full max-w-md bg-white border border-slate-200 rounded-xl shadow-sm overflow-hidden">
+
+        <div class="p-6 pb-0 space-y-1.5">
+            <h2 class="text-2xl font-semibold tracking-tight text-slate-900 text-center">Iniciar Sesión</h2>
+            <p class="text-sm text-slate-500 text-center">Ingresa tus datos para acceder a tu cuenta</p>
+        </div>
+
+        <div class="p-6 pt-0">
+            <form asp-action="Login" method="post" class="grid gap-6">
+
+                <div class="grid gap-4">
+
+                    <div class="grid gap-2">
+                        <label for="usuario" class="text-sm font-medium leading-none">Usuario</label>
+                        <input id="usuario" name="Username" type="text" required
+                               class="flex h-10 w-full rounded-md border border-slate-200 bg-white px-3 py-2 text-sm ring-offset-white placeholder:text-slate-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-950 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50" />
+                    </div>
+
+                    <div class="grid gap-2">
+                        <div class="flex items-center">
+                            <label for="password" class="text-sm font-medium leading-none">Contraseña</label>
+                            <a href="/CuentaControlador/CambiarClave" class="ml-auto inline-block text-sm underline underline-offset-4 hover:text-slate-900 text-slate-500">
+                                ¿Olvidaste tu contraseña?
+                            </a>
+                        </div>
+                        <input id="password" name="Clave" type="password" required
+                               class="flex h-10 w-full rounded-md border border-slate-200 bg-white px-3 py-2 text-sm ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-950 focus-visible:ring-offset-2" />
+                    </div>
+
+                    <div class="grid gap-2 pt-2">
+                        <button type="submit"
+                                class="inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors bg-slate-900 text-slate-50 hover:bg-slate-900/90 h-10 px-4 py-2 shadow-sm">
+                            Entrar
+                        </button>
+                    </div>
+
+                </div>
+
+                <div class="text-center text-sm text-slate-600">
+                    ¿No tienes una cuenta?
+                    <a href="/CuentaControlador/Registro" class="font-medium text-slate-950 underline underline-offset-4 hover:opacity-80">
+                        Regístrate aquí
+                    </a>
+                </div>
+
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>

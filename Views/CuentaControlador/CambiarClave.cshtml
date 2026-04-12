@@ -1,0 +1,51 @@
+﻿@{
+    ViewData["Title"] = "Cambiar contraseña";
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-50 flex items-center justify-center min-h-screen p-4">
+
+    <div class="w-full max-w-md bg-white border border-slate-200 rounded-xl shadow-sm overflow-hidden">
+
+        <div class="p-6 pb-0 space-y-1.5 text-center">
+            <h2 class="text-2xl font-semibold tracking-tight text-slate-900">Nueva Contraseña</h2>
+            <p class="text-sm text-slate-500 text-pretty">Ingresa tu usuario y la nueva clave para actualizarla.</p>
+        </div>
+
+        <div class="p-6 pt-0">
+            <form asp-action="CambiarClave" method="post" class="grid gap-6 mt-4">
+
+                <div class="grid gap-4">
+                    <div class="grid gap-2">
+                        <label class="text-sm font-medium leading-none">Confirmar Usuario</label>
+                        <input name="Username" type="text" required
+                               class="flex h-10 w-full rounded-md border border-slate-200 bg-white px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-slate-950 focus:ring-offset-2" />
+                    </div>
+
+                    <div class="grid gap-2">
+                        <label class="text-sm font-medium leading-none">Nueva Contraseña</label>
+                        <input name="NuevaClave" type="password" required
+                               class="flex h-10 w-full rounded-md border border-slate-200 bg-white px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-slate-950 focus:ring-offset-2" />
+                    </div>
+
+                    <button type="submit"
+                            class="inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors bg-slate-900 text-slate-50 hover:bg-slate-800 h-10 px-4 py-2 mt-2 shadow-sm">
+                        Actualizar Contraseña
+                    </button>
+                </div>
+
+                <div class="text-center text-sm">
+                    <a href="/CuentaControlador/Login" class="text-slate-500 hover:text-slate-900 underline underline-offset-4">Volver al inicio</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>

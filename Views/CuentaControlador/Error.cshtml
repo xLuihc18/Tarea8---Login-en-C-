@@ -1,0 +1,42 @@
+﻿@{
+    ViewData["Title"] = "Error";
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-50 flex items-center justify-center min-h-screen p-4">
+
+    <div class="w-full max-w-md bg-white border border-red-100 rounded-xl shadow-sm overflow-hidden text-center">
+
+        <div class="p-8 pb-4 flex justify-center">
+            <div class="w-16 h-16 bg-red-50 rounded-full flex items-center justify-center">
+                <span class="text-3xl">🤬</span>
+            </div>
+        </div>
+
+        <div class="p-6 pt-0 space-y-4">
+            <div class="space-y-1">
+                <h1 class="text-2xl font-bold tracking-tight text-slate-900 uppercase">¡Incorrecto!</h1>
+                <p class="text-slate-500 text-sm">
+                    El usuario o la contraseña no coinciden con nuestros registros.
+                </p>
+            </div>
+
+            <div class="pt-4">
+                <a href="/CuentaControlador/Login"
+                   class="inline-flex items-center justify-center w-full rounded-md text-sm font-medium transition-colors bg-slate-900 text-slate-50 hover:bg-slate-800 h-10 px-4 py-2 shadow-sm">
+                    Reintentar ahora
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
